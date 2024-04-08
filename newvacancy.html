@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="ssstyle.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqte/1.4.0/jqte.min.css">
+    <style>
+        td {
+            vertical-align: middle !important;
+        }
+        td p {
+            margin: unset;
+        }
+        img {
+            max-width: 100px;
+            max-height: 150px;
+        }
+    </style>
+
+	<title>New Vacancies Add</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">EduHire</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Profile</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-search' ></i>
+					<span class="text">Applications</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-plus' ></i>
+					<span class="text">Vacancy</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Status - Shortlisted</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-menu' ></i>
+					<span class="text">Status - Reexamine</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-smile' ></i>
+					<span class="text">Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-filter' ></i>
+					<span class="text">Payment</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="CEK.jpeg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>New Vacancy</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">new vacancy</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Make the List</span>
+				</a>
+			</div>
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <form id="manage-vacancy">
+        <input type="hidden" name="id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : '' ?>" class="form-control">
+        <div class="row form-group">
+            <div class="col-md-8">
+                <label class="control-label">Position Name</label>
+                <input type="text" name="position" class="form-control" value="Fill the Blank">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-8">
+                <label class="control-label">Availability</label>
+                <input type="number" name="availability" min="1" class="form-control text-right" value="<?php echo isset($availability) ? $availability : '' ?>">
+            </div>
+        </div>
+        
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <label class="control-label">Status</label>
+                    <select name="status" class="browser-default custom-select">
+                        <option value="1" <?php echo $status == 1 ? "selected" : '' ?>>Active</option>
+                        <option value="0" <?php echo $status == 0 ? "selected" : '' ?>>Closed</option>
+                    </select>
+                </div>
+            </div>
+            
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label class="control-label">Description</label>
+                <textarea name="description" class="text-jqte"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqte/1.4.0/jqte.min.js"></script>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+$('#vacancy_table').DataTable();
+
+$("#new_vacancy").click(function(){
+// You need to implement the functionality for adding a new vacancy
+alert("Implement functionality for adding a new vacancy");
+});
+
+// You need to implement functionality for editing a vacancy
+$(document).on("click", ".edit_vacancy", function() {
+alert("Implement functionality for editing a vacancy with ID: " + $(this).data('id'));
+});
+
+// You need to implement functionality for viewing a vacancy
+$(document).on("click", ".view_vacancy", function() {
+alert("Implement functionality for viewing a vacancy with ID: " + $(this).data('id'));
+});
+
+// You need to implement functionality for deleting a vacancy
+$(document).on("click", ".delete_vacancy", function() {
+var vacancyId = $(this).data('id');
+if (confirm("Are you sure to delete this Vacancy?")) {
+delete_vacancy(vacancyId);
+}
+});
+
+// Function to delete vacancy
+function delete_vacancy(vacancyId) {
+// Implement AJAX request to delete vacancy with the given ID
+alert("Implement AJAX request to delete vacancy with ID: " + vacancyId);
+}
+});
+
+$(document).ready(function() {
+$('.text-jqte').jqte();
+
+$('#manage-vacancy').submit(function(e) {
+e.preventDefault();
+start_load();
+$.ajax({
+url: 'ajax.php?action=save_vacancy',
+method: 'POST',
+data: $(this).serialize(),
+success: function(resp) {
+if (resp == 1) {
+    alert_toast("Data successfully saved.", 'success');
+    setTimeout(function() {
+        location.reload();
+    }, 1000);
+}
+}
+});
+});
+});
+
+</script>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<p><b>Position :</b><h4 id="position"></h4></p>
+<p><b>Availability :</b><h4 id="availability"></h4></p>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-lg-12" id="description">
+<!-- Description will be dynamically added here -->
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-lg-12">
+<button class="btn btn-primary btn-sm float-right" id="closeButton" type="button">Close</button>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const vacancyId = urlParams.get('id');
+
+$(document).ready(function() {
+const urlParams = new URLSearchParams(window.location.search);
+const vacancyId = urlParams.get('id');
+
+// Function to fetch vacancy details via AJAX
+const fetchVacancyDetails = () => {
+$.ajax({
+url: 'get_vacancy_details.php',
+method: 'POST',
+data: { id: vacancyId },
+success: function(response) {
+const vacancy = JSON.parse(response);
+displayVacancyDetails(vacancy);
+},
+error: function(xhr, status, error) {
+console.error(error);
+}
+});
+};
+
+// Function to display vacancy details on the page
+const displayVacancyDetails = (vacancy) => {
+$('#position').text(vacancy.position);
+$('#availability').text(vacancy.availability);
+$('#description').html(vacancy.description);
+};
+
+// Event listener for close button
+$('#closeButton').click(() => {
+window.close(); // Close the modal or window
+});
+
+// Initial call to fetch vacancy details
+fetchVacancyDetails();
+});
+
+</script>
+<style>
+/* Style for form container */
+.container-fluid {
+margin-top: 50px;
+}
+
+/* Style for form inputs */
+.form-control {
+border-radius: 0;
+}
+
+/* Style for submit button */
+.btn-primary {
+border-radius: 0;
+}
+
+/* Style for select dropdown */
+.custom-select {
+border-radius: 0;
+}
+
+/* Style for text area */
+.text-jqte {
+border-radius: 0;
+height: 150px; /* Adjust height as needed */
+}
+
+</style>
+</main>
+<!-- MAIN -->
+</section>
+<!-- CONTENT -->
+
+
+<script src="script.js"></script>
+</body>
+</html>

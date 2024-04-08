@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="ssstyle.css">
+
+	<title>admin</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">EduHire</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Profile</span>
+					<a href="adminprofile.html" class="btn solid"></a>
+					</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-search' ></i>
+					<span class="text">Applications</span>
+					<a href="admin application.html" class="btn solid"></a>
+            
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-plus' ></i>
+					<span class="text">Vacancy</span>
+					<a href="adminvacancy.html" class="btn solid"></a>
+           
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Status - Shortlisted</span>
+					<a href="adminshort.html" class="btn solid"></a>
+           
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-menu' ></i>
+					<span class="text">Status - Reexamine</span>
+					<a href="admindash.html" class="btn solid"></a>
+            
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+					<a href="adminchat.html" class="btn solid"></a>
+           
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-smile' ></i>
+					<span class="text">Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-filter' ></i>
+					<span class="text">Payment</span>
+					<a href="dashpaymt.html" class="btn solid"></a>
+           
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+					<a href="index.html" class="btn solid"></a>
+            
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="CEK.jpeg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Home</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Make the List</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>102</h3>
+						<p>New Applications</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">
+						<h3>New</h3>
+						<p>Vision</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-plus' ></i>
+					<span class="text">
+						<h3>Top</h3>
+						<p>Mission</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recently Received</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Date of submission</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="testimonial-1.jpg">
+									<p>Sarah Mary Kurian</p>
+								</td>
+								<td>01-03-2024</td>
+								<td><span class="status completed">Submitted</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="testimonial-2.jpg">
+									<p>Richard Parker</p>
+								</td>
+								<td>01-04-2024</td>
+								<td><span class="status pending">Submitted</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="testimonial-3.jpg">
+									<p>Heera William</p>
+								</td>
+								<td>01-04-2024</td>
+								<td><span class="status process">Submitted</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="testimonial-4.jpg">
+									<p>Pat Cummins</p>
+								</td>
+								<td>01-04-2024</td>
+								<td><span class="status pending">Submitted</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="NicePng_ryan-reynolds-png_7926701.png">
+									<p>Ryan Phillip</p>
+								</td>
+								<td>12-03-2024</td>
+								<td><span class="status completed">Submitted</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Remainders</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>To do List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>To do List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>To do List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>To do List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>To do List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
+</html>
